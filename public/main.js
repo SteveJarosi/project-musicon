@@ -30,3 +30,11 @@ const context = {
     }
   ]
 };
+
+let templateElement = document.getElementById("templateHB");
+let templateSource = templateElement.innerHTML;
+let template = Handlebars.compile(templateSource);
+let compiledHtml = template(context);
+document.getElementById("information").innerHTML = compiledHtml;
+
+
